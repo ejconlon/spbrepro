@@ -1,4 +1,4 @@
-syntax="proto2";
+syntax = "proto3";
 
 import "google/protobuf/descriptor.proto";
 
@@ -6,11 +6,11 @@ package ext;
 
 message TypeOpts {
     oneof type {
-      bool option_a  =  7;
-      bool option_b  =  8;
+        bool option_a  =  7;
+        bool option_b  =  8;
     }
-  }
+}
 
 extend google.protobuf.FieldOptions {
-    optional TypeOpts type = 90210;
+    TypeOpts type = 90210;
 }
