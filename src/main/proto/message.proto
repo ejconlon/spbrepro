@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+import "ext.proto";
+
+message Message {
+    string name = 1 [(ext.type).option_b = true];
+}
